@@ -15,10 +15,11 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 ```ashrae_outliers_deletion_verbose.ipynb```: verbose version of ```ashrae_outliers_deletion.ipynb``` that comes with plot showing data before and after deleting outliers which explains why certain data is considered as outliers and needs to be deleted.
 
 **Folder: ashrae_aws**
+
 AWS Sagemaker notebooks. 
 
 ```data_preparation.ipynb```: almost same as notebook ```ashrae_data_preparation.ipynb``` except that it prepares data in AWS and writes output files to S3 automatically.
 
-```xgboost_train.ipynb```: trains a model with AWS built-in xgboost algorithm. Note that the model was trained with only 6 rounds due to the lack of mememory. I once trained it untill 28 rounds when the validation stops improving. But model trained with 28 rounds wasn't deplolyed successfully due to lack of mememory eventhough I have already created two support cases to ask for more resources (instances with more mommory). I stop trying more powerful instances when the bills went up :D.
+```xgboost_train.ipynb```: trains a model with AWS built-in xgboost algorithm. Note that the model was trained with only 6 rounds due to the lack of mememory. I once trained it untill 28 rounds when the validation stops improving. But model trained with 28 rounds wasn't deplolyed successfully due to lack of mememory eventhough I have already created two support cases to ask for more resources (instances with more mememory). I stop trying more powerful instances when the bills went up :D.
 
 ```xgboost_prediction.ipynb```: uses the trained xgboost model to predict.
