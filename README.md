@@ -1,1 +1,24 @@
 # ASHRAE-energy-prediction
+
+The code in this repository is for [Kaggle competition ashrae energy prediction](https://www.kaggle.com/c/ashrae-energy-prediction). I am still improving the code, so the resulting public score from this code might not be attractive enough yet :D
+
+## Descriptions of files
+
+```ashrae_data_preparation.ipynb```: prepare data locally for training in AWS. Upload the output files mannually to AWS's s3 services before training in AWS.
+
+```ashrae_lightGBM.ipynb```: borrowed from [this Kaggle notebook]. I use it as a starting point. This notebook cleans data very lightly, fills missing weather information with relevant mean value of the day of the month, uses KFold lightGBM model. The Kaggle public score for the result from this notebook was 2.227.
+
+```ashrae_lightGBM_with_data_cleaned.ipynb```: use data where outliers are removed more thoroughly, fill missing weather information with interpolate within a site and use KFold lightGBM model. The Kaggle public score for the result from this notebook was 1.139. From this example, we can see the magic of cleaning data.
+
+```ashrae_outliers_deletion.ipynb```: remove outliers site by site, building by building. This notebook removes about 4% rows of data.
+
+```ashrae_outliers_deletion_verbose.ipynb```: verbose version of ```ashrae_outliers_deletion.ipynb``` that comes with plot showing data before and after deleting outliers which explains why certain data is considered as outliers and needs to be deleted.
+
+**Folder: ashrae_aws**
+AWS Sagemaker notebooks. 
+
+```data_preparation.ipynb```: almost same as notebook ```ashrae_data_preparation.ipynb``` except that it prepares data in AWS and writes output files to S3 automatically.
+
+```xgboost_train.ipynb```: trains a model with AWS built-in xgboost algorithm. Note that the model was trained with only 6 rounds due to the lack of mememory. I once trained it untill 28 rounds when the validation stops improving. But model trained with 28 rounds wasn't deplolyed successfully due to lack of mememory eventhough I have already created two support cases to ask for more resources (instances with more mommory). I stop trying more powerful instances when the bills went up :D.
+
+```xgboost_prediction.ipynb```: uses the trained xgboost model to predict.
