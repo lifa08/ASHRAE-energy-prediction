@@ -6,7 +6,7 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 
 ```ashrae_data_preparation.ipynb```: prepare data locally for training in AWS. Upload the output files mannually to AWS's s3 services before training in AWS.
 
-```ashrae_lightGBM.ipynb```: borrowed from [this Kaggle notebook]. I use it as a starting point. This notebook cleans data very lightly, fills missing weather information with relevant mean value of the day of the month, uses KFold lightGBM model. The Kaggle public score for the result from this notebook was 2.227.
+```ashrae_lightGBM.ipynb```: borrowed from [this Kaggle notebook](https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08/comments). I use it as a starting point. This notebook cleans data very lightly, fills missing weather information with relevant mean value of the day of the month, uses KFold lightGBM model. The Kaggle public score for the result from this notebook was 2.227.
 
 ```ashrae_lightGBM_with_data_cleaned.ipynb```: use data where outliers are removed more thoroughly, fill missing weather information with interpolate within a site and use KFold lightGBM model. The Kaggle public score for the result from this notebook was 1.139. From this example, we can see the magic of cleaning data.
 
