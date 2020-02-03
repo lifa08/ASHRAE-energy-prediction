@@ -18,7 +18,7 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 
 ## Descriptions of files
 
-```ashrae_data_preparation.ipynb```: prepare data locally for training in AWS. Upload the output files mannually to AWS's s3 services before training in AWS.
+[ashrae_data_preparation.ipynb](ashrae_data_preparation.ipynb): prepare data locally for training in AWS. Upload the output files mannually to AWS's s3 services before training in AWS.
 
 ```ashrae_lightGBM.ipynb```: borrowed from [this Kaggle notebook](https://www.kaggle.com/aitude/ashrae-kfold-lightgbm-without-leak-1-08/comments). I use it as a starting point. This notebook cleans data very lightly, fills missing weather information with relevant mean value of the day of the month, uses KFold lightGBM model. The Kaggle public score for the result from this notebook was 2.227.
 
@@ -28,7 +28,7 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 
 ```ashrae_outliers_deletion_verbose.ipynb```: verbose version of ```ashrae_outliers_deletion.ipynb``` that comes with plot showing data before and after deleting outliers which explains why certain data is considered as outliers and needs to be deleted.
 
-[Folder: ashrae_aws](ashrae_aws/)
+[ashrae_aws](ashrae_aws/)
 
 AWS Sagemaker notebooks. 
 
