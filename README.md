@@ -28,7 +28,7 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 
 ```ashrae_outliers_deletion_verbose.ipynb```: verbose version of ```ashrae_outliers_deletion.ipynb``` that comes with plot showing data before and after deleting outliers which explains why certain data is considered as outliers and needs to be deleted.
 
-**Folder: ashrae_aws**
+[Folder: ashrae_aws](ashrae_aws/)
 
 AWS Sagemaker notebooks. 
 
