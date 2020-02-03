@@ -6,7 +6,9 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 * Jupyter Notebook
 * Pandas
 * Numpy
-*  AWS Sagemaker
+* AWS Sagemaker
+* lightGBM
+* xgboost
 
 ## Descriptions of files
 
