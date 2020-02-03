@@ -10,6 +10,10 @@ The code in this repository is for [Kaggle competition ashrae energy prediction]
 * lightGBM
 * xgboost
 
+## To do
+* Construct different feature sets for different sites
+* Train different models for different sites
+
 ## Descriptions of files
 
 ```ashrae_data_preparation.ipynb```: prepare data locally for training in AWS. Upload the output files mannually to AWS's s3 services before training in AWS.
