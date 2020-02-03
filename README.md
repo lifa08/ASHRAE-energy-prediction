@@ -1,3 +1,5 @@
+# ![ASHRAE-energy-prediction](demo_dataclean.png)
+
 # ASHRAE-energy-prediction
 
 The code in this repository is for [Kaggle competition ashrae energy prediction](https://www.kaggle.com/c/ashrae-energy-prediction). I am still improving the code, so the resulting public score from this code might not be attractive enough yet :D
